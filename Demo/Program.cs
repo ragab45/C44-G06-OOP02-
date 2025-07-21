@@ -79,7 +79,33 @@
             //}
             #endregion
             #region V-3
-             public class Animal
+            //     public class Animal
+            //{
+            //    // Property for the animal's name
+            //    public string Name { get; set; }
+
+            //    // Method for the animal to eat
+            //    public void Eat()
+            //    {
+            //        Console.WriteLine("Eating ....");
+            //    }
+            //}
+
+            //// Define the Dog class
+            //public class Dog
+            //{
+            //    // Property for the dog's name
+            //    public string Name { get; set; }
+
+            //    // Method for the dog to eat
+            //    public void Eat()
+            //    {
+            //        Console.WriteLine("Eating ....");
+            //    }
+            //}
+            #endregion
+            #region V-4
+               public class Animal
         {
             // Property for the animal's name
             public string Name { get; set; }
@@ -89,18 +115,27 @@
             {
                 Console.WriteLine("Eating ....");
             }
+
+            // Virtual method for the animal to speak, allowing overrides in derived classes
+            public virtual void Speak()
+            {
+                Console.WriteLine("Animal Sound");
+            }
         }
 
-        // Define the Dog class
-        public class Dog
+        // Define the Dog class, inheriting from Animal
+        public class Dog : Animal
         {
-            // Property for the dog's name
-            public string Name { get; set; }
-
-            // Method for the dog to eat
-            public void Eat()
+            // Method specific to Dog for barking
+            public void Bark()
             {
-                Console.WriteLine("Eating ....");
+                Console.WriteLine("Barking ...");
+            }
+
+            // Override the Speak method from Animal to provide a Dog-specific sound
+            public override void Speak()
+            {
+                Console.WriteLine("Woof Woof!");
             }
         }
         #endregion
